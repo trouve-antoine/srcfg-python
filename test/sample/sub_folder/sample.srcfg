@@ -1,0 +1,32 @@
+@import imported.srcfg
+
+[global]
+;; @insert file_name.key
+;; @insert ./file_location.srcfg
+;; another comment
+key1 = val1
+key3 = 42 ;; comments
+key4 = ${ENV_VAR}
+key5 = first line
+= that continues
+= over lines
+;; beware of leading/trailing spaces
+:= and some spaces around  
+;; beware of leading/trailing spaces
+key7 := 43dd   
+key8 := yoyo ;; not a comment
+key9 = in sample
+
+[global]
+key1 = val1 override
+
+[parent]
+key1 = val1
+[[.children]]
+name = first kid
+[[.children]]
+name = second kid
+
+[another section]
+key1 = [ 1, 2, 3 ]
+key2 = { a: "a", b: "c", c: { a: [1,2,3] } }

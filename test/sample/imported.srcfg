@@ -1,0 +1,6 @@
+[global]
+key9 = in imported
+key10 = a new value
+
+[new section]
+key1 = I am imported
